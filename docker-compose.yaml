@@ -6,7 +6,7 @@ services:
       dockerfile: "Dockerfile"
     image: "spring-docker"
     environment:
-      - "MONGO_HOST=mongo-spring_docker"
+      - "MONGO_HOST=mongo-learning-docker"
     ports:
       - "8080:8080"
     depends_on:
