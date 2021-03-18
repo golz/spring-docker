@@ -1,0 +1,18 @@
+version: "2"
+services:
+  learning-docker:
+    build:
+      context: "."
+      dockerfile: "Dockerfile"
+    image: "spring-docker"
+    environment:
+      - "MONGO_HOST=mongo-spring_docker"
+    ports:
+      - "8080:8080"
+    depends_on:
+      - "mongo-learning-docker"
+
+  mongo-learning-docker:
+    image: "mongo:latest"
+    ports:
+      - "27018:27017"
